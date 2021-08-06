@@ -1,0 +1,110 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 4000 3000 0    50   Input ~ 0
+HIGH_VOLTAGE
+$Comp
+L Device:R R?
+U 1 1 6110B2A1
+P 5050 3350
+AR Path="/610E7766/6110B2A1" Ref="R?"  Part="1" 
+AR Path="/611083A4/6110B2A1" Ref="R?"  Part="1" 
+F 0 "R?" V 5150 3300 50  0000 L CNN
+F 1 "2.7k" V 5050 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4980 3350 50  0001 C CNN
+F 3 "~" H 5050 3350 50  0001 C CNN
+	1    5050 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NPN_BEC Q?
+U 1 1 6110B2A9
+P 4600 3350
+AR Path="/610E7766/6110B2A9" Ref="Q?"  Part="1" 
+AR Path="/611083A4/6110B2A9" Ref="Q?"  Part="1" 
+F 0 "Q?" H 4791 3396 50  0000 L CNN
+F 1 "BFS20W" H 4791 3305 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4800 3450 50  0001 C CNN
+F 3 "~" H 4600 3350 50  0001 C CNN
+	1    4600 3350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 6111B5C3
+P 4650 2800
+F 0 "L?" V 4840 2800 50  0000 C CNN
+F 1 "100uH" V 4749 2800 50  0000 C CNN
+F 2 "Inductor_SMD:L_Vishay_IHLP-2020" H 4650 2800 50  0001 C CNN
+F 3 "~" H 4650 2800 50  0001 C CNN
+	1    4650 2800
+	0    -1   -1   0   
+$EndComp
+Text HLabel 4900 2800 2    50   Input ~ 0
+BATTERY
+Wire Wire Line
+	4900 2800 4800 2800
+Wire Wire Line
+	4500 2800 4500 3000
+Wire Wire Line
+	4000 3000 4500 3000
+Connection ~ 4500 3000
+Wire Wire Line
+	4500 3000 4500 3150
+Wire Wire Line
+	4500 3550 4500 3750
+$Comp
+L power:Earth #PWR?
+U 1 1 6111D3A4
+P 4500 3750
+F 0 "#PWR?" H 4500 3500 50  0001 C CNN
+F 1 "Earth" H 4500 3600 50  0001 C CNN
+F 2 "" H 4500 3750 50  0001 C CNN
+F 3 "~" H 4500 3750 50  0001 C CNN
+	1    4500 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3350 4850 3350
+Wire Wire Line
+	5200 3350 5250 3350
+Text HLabel 5300 3350 2    50   Input ~ 0
+SWITCH
+$Comp
+L Device:C C?
+U 1 1 6111E20B
+P 5050 3750
+F 0 "C?" V 4900 3750 50  0000 C CNN
+F 1 "10nF" V 5200 3750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5088 3600 50  0001 C CNN
+F 3 "~" H 5050 3750 50  0001 C CNN
+	1    5050 3750
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	4900 3750 4850 3750
+Wire Wire Line
+	4850 3750 4850 3350
+Connection ~ 4850 3350
+Wire Wire Line
+	4850 3350 4900 3350
+Wire Wire Line
+	5200 3750 5250 3750
+Wire Wire Line
+	5250 3750 5250 3350
+Connection ~ 5250 3350
+Wire Wire Line
+	5250 3350 5300 3350
+$EndSCHEMATC

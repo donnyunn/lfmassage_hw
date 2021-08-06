@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name ali_Connector)(type Legacy)(uri ${KIPRJMOD}/lib/ali_Connector/ali_Connector.lib)(options "")(descr ""))
+)
