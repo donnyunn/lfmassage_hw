@@ -59,7 +59,7 @@ U 1 1 610D1179
 P 4750 1700
 F 0 "J1" H 4668 1917 50  0000 C CNN
 F 1 "Batt" H 4668 1826 50  0000 C CNN
-F 2 "Connector_Molex:Molex_PicoBlade_53261-0271_1x02-1MP_P1.25mm_Horizontal" H 4750 1700 50  0001 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53398-0271_1x02-1MP_P1.25mm_Vertical" H 4750 1700 50  0001 C CNN
 F 3 "~" H 4750 1700 50  0001 C CNN
 	1    4750 1700
 	1    0    0    -1  
@@ -132,8 +132,8 @@ L Device:C C1
 U 1 1 610DE0D8
 P 4200 1950
 F 0 "C1" V 4350 1900 50  0000 L CNN
-F 1 "10uF/2012" V 4050 1950 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4238 1800 50  0001 C CNN
+F 1 "10uF/1608" V 4050 1950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4238 1800 50  0001 C CNN
 F 3 "~" H 4200 1950 50  0001 C CNN
 	1    4200 1950
 	1    0    0    -1  
@@ -159,8 +159,8 @@ L Device:LED D1
 U 1 1 610E25EA
 P 3600 1300
 F 0 "D1" H 3600 1400 50  0000 L CNN
-F 1 "LED/2012" H 3400 1150 50  0000 L CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3600 1300 50  0001 C CNN
+F 1 "LED/1608" H 3400 1150 50  0000 L CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 3600 1300 50  0001 C CNN
 F 3 "~" H 3600 1300 50  0001 C CNN
 	1    3600 1300
 	-1   0    0    1   
@@ -222,9 +222,9 @@ U 1 1 6112861A
 P 2500 4900
 F 0 "K1" H 2500 5185 50  0000 C CNN
 F 1 "MODE" H 2500 5094 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_B3SL-1002P" H 2500 5100 50  0001 C CNN
-F 3 "https://eleparts.co.kr/goods/view?no=8481660" H 2500 5100 50  0001 C CNN
-F 4 "PTS526" H 2500 4900 50  0001 C CNN "MPN"
+F 2 "Button_Switch_SMD:Panasonic_EVQPUJ_EVQPUA" H 2500 5100 50  0001 C CNN
+F 3 "https://www.eleparts.co.kr/goods/view?no=2514448" H 2500 5100 50  0001 C CNN
+F 4 "EVQ-P7A01P" H 2500 4900 50  0001 C CNN "MPN"
 	1    2500 4900
 	1    0    0    -1  
 $EndComp
@@ -407,27 +407,8 @@ F 3 "~" H 9050 4600 50  0001 C CNN
 	1    9050 4600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J2
-U 1 1 61152ECE
-P 10000 1850
-F 0 "J2" H 9918 2067 50  0000 C CNN
-F 1 "OUT" H 9918 1976 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10000 1850 50  0001 C CNN
-F 3 "~" H 10000 1850 50  0001 C CNN
-	1    10000 1850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9400 1750 9650 1750
-Wire Wire Line
-	9650 1750 9650 1850
-Wire Wire Line
-	9650 1850 9800 1850
-Wire Wire Line
-	9800 1950 9650 1950
-Wire Wire Line
-	9650 1950 9650 2050
 Wire Wire Line
 	9650 2050 9400 2050
 $Comp
@@ -564,7 +545,7 @@ Text GLabel 5300 3950 0    50   Input ~ 0
 C2CK
 Text GLabel 6700 4350 2    50   Input ~ 0
 C2D
-Text GLabel 6000 3650 1    50   Input ~ 0
+Text GLabel 6000 3350 1    50   Input ~ 0
 VCC
 $Comp
 L power:Earth #PWR011
@@ -577,58 +558,34 @@ F 3 "~" H 6000 5050 50  0001 C CNN
 	1    6000 5050
 	1    0    0    -1  
 $EndComp
-Text GLabel 6700 3950 2    50   Input ~ 0
-P1.0(SW)
+Text GLabel 6700 4150 2    50   Input ~ 0
+P1.2(SW)
 Text GLabel 6150 1850 0    50   Input ~ 0
-P1.0(SW)
+P1.2(SW)
 Text GLabel 6700 4250 2    50   Input ~ 0
 P1.3(SENS)
 Text GLabel 7950 2200 0    50   Input ~ 0
 P1.3(SENS)
 Text GLabel 6700 4050 2    50   Input ~ 0
 P1.1(POS)
-Text GLabel 6700 4150 2    50   Input ~ 0
-P1.2(NEG)
+Text GLabel 6700 3950 2    50   Input ~ 0
+P1.0(NEG)
 Text GLabel 7950 2350 0    50   Input ~ 0
 P1.1(POS)
 Text GLabel 7950 2500 0    50   Input ~ 0
-P1.2(NEG)
-Text GLabel 5300 4050 0    50   Input ~ 0
-P0.0(MODE)
+P1.0(NEG)
 Text GLabel 5300 4150 0    50   Input ~ 0
-P0.1(+)
+P0.1(MODE)
+Text GLabel 5300 4050 0    50   Input ~ 0
+P0.0(+)
 Text GLabel 5300 4250 0    50   Input ~ 0
 P0.2(-)
 Text GLabel 5300 4750 0    50   Input ~ 0
 P0.7(BUZZER)
 Text GLabel 9750 4400 2    50   Input ~ 0
 P0.7(BUZZER)
-$Comp
-L Switch:SW_Push K2
-U 1 1 613E4556
-P 2500 5900
-F 0 "K2" H 2500 6185 50  0000 C CNN
-F 1 "+" H 2500 6094 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_B3SL-1002P" H 2500 6100 50  0001 C CNN
-F 3 "https://eleparts.co.kr/goods/view?no=8481660" H 2500 6100 50  0001 C CNN
-F 4 "PTS526" H 2500 5900 50  0001 C CNN "MPN"
-	1    2500 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push K3
-U 1 1 613E4BAC
-P 2500 6900
-F 0 "K3" H 2500 7185 50  0000 C CNN
-F 1 "-" H 2500 7094 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_B3SL-1002P" H 2500 7100 50  0001 C CNN
-F 3 "https://eleparts.co.kr/goods/view?no=8481660" H 2500 7100 50  0001 C CNN
-F 4 "PTS526" H 2500 6900 50  0001 C CNN "MPN"
-	1    2500 6900
-	1    0    0    -1  
-$EndComp
 Text GLabel 3150 4800 2    50   Input ~ 0
-P0.0(MODE)
+P0.1(MODE)
 $Comp
 L power:Earth #PWR010
 U 1 1 613E59D9
@@ -673,7 +630,7 @@ VCC
 Text GLabel 3450 6900 2    50   Input ~ 0
 VCC
 Text GLabel 3300 5800 2    50   Input ~ 0
-P0.1(+)
+P0.0(+)
 Wire Wire Line
 	3300 5800 2950 5800
 Wire Wire Line
@@ -809,95 +766,167 @@ Wire Wire Line
 	7250 5500 6900 5500
 Text GLabel 8700 3800 1    50   Input ~ 0
 VCC
-$Comp
-L Device:LED D3
-U 1 1 61422279
-P 5100 6100
-F 0 "D3" V 5139 5982 50  0000 R CNN
-F 1 "RED" V 5048 5982 50  0000 R CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 5100 6100 50  0001 C CNN
-F 3 "" H 5100 6100 50  0001 C CNN
-	1    5100 6100
-	0    -1   -1   0   
-$EndComp
 Text GLabel 5300 4350 0    50   Input ~ 0
 P0.3(RED)
 Text GLabel 5300 4450 0    50   Input ~ 0
-P0.4(BLU)
+P0.4(GRN)
 Text GLabel 5300 4550 0    50   Input ~ 0
-P0.5(WHT)
+P0.5(BLU)
 $Comp
 L Device:R R5
 U 1 1 61422CAB
-P 5100 5800
-F 0 "R5" V 5000 5850 50  0000 R CNN
-F 1 "560" V 5100 5800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5030 5800 50  0001 C CNN
-F 3 "~" H 5100 5800 50  0001 C CNN
-	1    5100 5800
+P 5250 6100
+F 0 "R5" V 5150 6150 50  0000 R CNN
+F 1 "560" V 5250 6100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5180 6100 50  0001 C CNN
+F 3 "~" H 5250 6100 50  0001 C CNN
+	1    5250 6100
 	1    0    0    -1  
 $EndComp
 Text GLabel 5100 5500 0    50   Input ~ 0
 VCC
-Wire Wire Line
-	5100 5500 5100 5650
-Text GLabel 5100 6250 3    50   Input ~ 0
+Text GLabel 5250 6250 3    50   Input ~ 0
 P0.3(RED)
-$Comp
-L Device:LED D4
-U 1 1 6142EF38
-P 5450 6100
-F 0 "D4" V 5489 5982 50  0000 R CNN
-F 1 "BLU" V 5398 5982 50  0000 R CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 5450 6100 50  0001 C CNN
-F 3 "" H 5450 6100 50  0001 C CNN
-	1    5450 6100
-	0    -1   -1   0   
-$EndComp
 $Comp
 L Device:R R6
 U 1 1 6142EF3E
-P 5450 5800
-F 0 "R6" V 5350 5850 50  0000 R CNN
-F 1 "560" V 5450 5800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5380 5800 50  0001 C CNN
-F 3 "~" H 5450 5800 50  0001 C CNN
-	1    5450 5800
+P 5550 6100
+F 0 "R6" V 5450 6150 50  0000 R CNN
+F 1 "560" V 5550 6100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5480 6100 50  0001 C CNN
+F 3 "~" H 5550 6100 50  0001 C CNN
+	1    5550 6100
 	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5450 5500 5450 5650
-$Comp
-L Device:LED D5
-U 1 1 614306EF
-P 5800 6100
-F 0 "D5" V 5839 5982 50  0000 R CNN
-F 1 "WHT" V 5748 5982 50  0000 R CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 5800 6100 50  0001 C CNN
-F 3 "" H 5800 6100 50  0001 C CNN
-	1    5800 6100
-	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R7
 U 1 1 614306F5
-P 5800 5800
-F 0 "R7" V 5700 5850 50  0000 R CNN
-F 1 "560" V 5800 5800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5730 5800 50  0001 C CNN
-F 3 "~" H 5800 5800 50  0001 C CNN
-	1    5800 5800
+P 5850 6100
+F 0 "R7" V 5750 6150 50  0000 R CNN
+F 1 "560" V 5850 6100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5780 6100 50  0001 C CNN
+F 3 "~" H 5850 6100 50  0001 C CNN
+	1    5850 6100
 	1    0    0    -1  
 $EndComp
+Text GLabel 5550 6250 3    50   Input ~ 0
+P0.4(GRN)
+Text GLabel 5850 6250 3    50   Input ~ 0
+P0.5(BLU)
+$Comp
+L Device:C C10
+U 1 1 6146621A
+P 5650 3500
+F 0 "C10" V 5700 3550 50  0000 L CNN
+F 1 "10uF/1608" V 5500 3500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5688 3350 50  0001 C CNN
+F 3 "~" H 5650 3500 50  0001 C CNN
+	1    5650 3500
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	5800 5500 5800 5650
+	6000 3350 6000 3500
 Wire Wire Line
-	5100 5500 5450 5500
+	5800 3500 6000 3500
+Connection ~ 6000 3500
 Wire Wire Line
-	5450 5500 5800 5500
-Connection ~ 5450 5500
-Text GLabel 5450 6250 3    50   Input ~ 0
-P0.4(BLU)
-Text GLabel 5800 6250 3    50   Input ~ 0
-P0.5(WHT)
+	6000 3500 6000 3650
+$Comp
+L power:Earth #PWR024
+U 1 1 6146B120
+P 5500 3500
+F 0 "#PWR024" H 5500 3250 50  0001 C CNN
+F 1 "Earth" H 5500 3350 50  0001 C CNN
+F 2 "" H 5500 3500 50  0001 C CNN
+F 3 "~" H 5500 3500 50  0001 C CNN
+	1    5500 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push K2
+U 1 1 614753FA
+P 2500 5900
+F 0 "K2" H 2500 6185 50  0000 C CNN
+F 1 "+" H 2500 6094 50  0000 C CNN
+F 2 "Button_Switch_SMD:Panasonic_EVQPUJ_EVQPUA" H 2500 6100 50  0001 C CNN
+F 3 "https://www.eleparts.co.kr/goods/view?no=2514448" H 2500 6100 50  0001 C CNN
+F 4 "EVQ-P7A01P" H 2500 5900 50  0001 C CNN "MPN"
+	1    2500 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push K3
+U 1 1 61475DBD
+P 2500 6900
+F 0 "K3" H 2500 7185 50  0000 C CNN
+F 1 "-" H 2500 7094 50  0000 C CNN
+F 2 "Button_Switch_SMD:Panasonic_EVQPUJ_EVQPUA" H 2500 7100 50  0001 C CNN
+F 3 "https://www.eleparts.co.kr/goods/view?no=2514448" H 2500 7100 50  0001 C CNN
+F 4 "EVQ-P7A01P" H 2500 6900 50  0001 C CNN "MPN"
+	1    2500 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 61534E41
+P 5250 5800
+F 0 "D3" H 5250 5900 50  0000 L CNN
+F 1 "LED/1608" H 5050 5650 50  0000 L CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 5250 5800 50  0001 C CNN
+F 3 "~" H 5250 5800 50  0001 C CNN
+	1    5250 5800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 6153A32F
+P 5550 5800
+F 0 "D4" H 5550 5900 50  0000 L CNN
+F 1 "LED/1608" H 5350 5650 50  0000 L CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 5550 5800 50  0001 C CNN
+F 3 "~" H 5550 5800 50  0001 C CNN
+	1    5550 5800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 6153A7D6
+P 5850 5800
+F 0 "D5" H 5850 5900 50  0000 L CNN
+F 1 "LED/1608" H 5650 5650 50  0000 L CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 5850 5800 50  0001 C CNN
+F 3 "~" H 5850 5800 50  0001 C CNN
+	1    5850 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5850 5500 5850 5650
+Wire Wire Line
+	5100 5500 5250 5500
+Wire Wire Line
+	5550 5650 5550 5500
+Connection ~ 5550 5500
+Wire Wire Line
+	5550 5500 5850 5500
+Wire Wire Line
+	5250 5650 5250 5500
+Connection ~ 5250 5500
+Wire Wire Line
+	5250 5500 5550 5500
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 615166A6
+P 9850 1950
+F 0 "J2" H 9930 1942 50  0000 L CNN
+F 1 "electrode" H 9930 1851 50  0000 L CNN
+F 2 "lfmassage_pad:electrode" H 9850 1950 50  0001 C CNN
+F 3 "~" H 9850 1950 50  0001 C CNN
+	1    9850 1950
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9650 1850 9650 1750
+Wire Wire Line
+	9650 1950 9650 2050
+Connection ~ 9650 1750
 $EndSCHEMATC
